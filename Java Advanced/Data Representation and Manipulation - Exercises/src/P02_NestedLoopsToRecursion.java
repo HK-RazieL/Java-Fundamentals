@@ -2,7 +2,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-public class NestedLoopsToRecursion {
+public class P02_NestedLoopsToRecursion {
     public static int number;
     public static int[] loops;
 
