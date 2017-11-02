@@ -1,4 +1,16 @@
 Java Fundamentals
   - Java Advanced
-    -- 1. Java Syntax - Lab
-    -- 2. Java Syntax - Exercise
+    -- 1. Intro to Java
+    -- 2. Abstraction
+    -- 3. String Processing
+    -- 4. Data Representation and Data Manipulation
+    -- 5. Obects, Classes and APIs
+    -- 6. Functional Programming
+    -- 7. Built-in Query Methods - Stream API
+    -- 8. Input/Output, Files and Directories
+    -- 9. Asynchronous Programming
+  - Java OOP - Basics
+    -- 1. Defining Classes
+    -- 2. Encapsulation
+    -- 3. Inheritence
+    -- 4. Polymorphism
