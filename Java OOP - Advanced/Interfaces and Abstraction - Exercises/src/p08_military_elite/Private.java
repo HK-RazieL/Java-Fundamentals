@@ -2,7 +2,7 @@ package p08_military_elite;
 
 public class Private extends Soldier implements IPrivate {
 
-    double salary;
+    private double salary;
 
     public Private(int id, String firstName, String lastName, double salary) {
         super(id, firstName, lastName);
@@ -11,17 +11,17 @@ public class Private extends Soldier implements IPrivate {
 
     @Override
     public int getId() {
-        return this.id;
+        return super.getId();
     }
 
     @Override
     public String getFirstName() {
-        return this.firstName;
+        return super.getFirstName();
     }
 
     @Override
     public String getLastName() {
-        return this.lastName;
+        return super.getLastName();
     }
 
     @Override
@@ -31,7 +31,7 @@ public class Private extends Soldier implements IPrivate {
 
     @Override
     public String toString() {
-        return String.format("Name: %s %s Id: %d Salary: %.2f", this.firstName, this.lastName, this.id, this.salary);
+        return super.toString() + String.format(" Salary: %.2f", this.salary);
     }
 
     @Override

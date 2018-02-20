@@ -5,36 +5,16 @@ import java.util.List;
 
 public class LeutenantGeneral extends Private implements ILeutenantGeneral, IPrivate {
 
-    List<Private> privates = new ArrayList<>();
+    private List<Private> privates = new ArrayList<>();
 
     public LeutenantGeneral(int id, String firstName, String lastName, double salary) {
         super(id, firstName, lastName, salary);
     }
 
     @Override
-    public int getId() {
-        return this.id;
-    }
-
-    @Override
-    public String getFirstName() {
-        return this.firstName;
-    }
-
-    @Override
-    public String getLastName() {
-        return this.lastName;
-    }
-
-    @Override
-    public double getSalary() {
-        return this.salary;
-    }
-
-    @Override
     public String toString() {
         privates.sort((x,y) -> Integer.compare(y.getId(), x.getId()));
-        System.out.printf("Name: %s %s Id: %d Salary: %.2f%nPrivates:", this.firstName, this.lastName, this.id, this.salary);
+        System.out.printf("%s%nPrivates:", super.toString());
         for (Private p : privates) {
             System.out.printf("%n %s", p.toString());
         }

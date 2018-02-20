@@ -1,8 +1,8 @@
 package p08_military_elite;
 
-public class Spy extends Soldier implements ISpy{
+public class Spy extends Soldier implements ISpy {
 
-    int codeNumber;
+    private int codeNumber;
 
     public Spy(int id, String firstName, String lastName, int codeNumber) {
         super(id, firstName, lastName);
@@ -10,33 +10,30 @@ public class Spy extends Soldier implements ISpy{
     }
 
     @Override
-    public int getId() {
-        return this.id;
-    }
-
-    @Override
-    public String getFirstName() {
-        return this.firstName;
-    }
-
-    @Override
-    public String getLastName() {
-        return this.lastName;
-    }
-
-    @Override
     public int getCodeNumber() {
-        return this.codeNumber;
-    }
-
-    @Override
-    public String toString() {
-        return String.format("Name: %s %s Id: %d%nCode Number: %d", this.firstName, this.lastName, this.id, this.codeNumber);
+        return 0;
     }
 
     @Override
     public double getSalary() {
         return 0;
+    }
+
+
+    @Override
+    public String getCorps() {
+        return null;
+    }
+
+    @Override
+    public void addPrivates(Private id) {
+
+    }
+
+    @Override
+    public String toString() {
+        return super.toString() + String.format("%nCode Number: %d", this.codeNumber);
+
     }
 
     @Override
@@ -51,16 +48,6 @@ public class Spy extends Soldier implements ISpy{
 
     @Override
     public void addRepairs(String part, int hours) {
-
-    }
-
-    @Override
-    public String getCorps() {
-        return null;
-    }
-
-    @Override
-    public void addPrivates(Private id) {
 
     }
 }

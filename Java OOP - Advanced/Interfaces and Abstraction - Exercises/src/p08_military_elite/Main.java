@@ -53,7 +53,6 @@ public class Main {
                 case "End":
                     return;
             }
-
             System.out.println(soldier);
         }
     }

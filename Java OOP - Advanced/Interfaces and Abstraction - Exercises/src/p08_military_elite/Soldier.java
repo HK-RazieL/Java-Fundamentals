@@ -1,9 +1,9 @@
 package p08_military_elite;
 
 public abstract class Soldier implements ISoldier, ILeutenantGeneral, IEngineer, ICommando{
-    int id;
-    String firstName;
-    String lastName;
+    private int id;
+    private String firstName;
+    private String lastName;
 
     public Soldier(int id, String firstName, String lastName) {
         this.id = id;

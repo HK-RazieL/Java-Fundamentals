@@ -5,7 +5,7 @@ import java.util.Map;
 
 public class Commando extends SpecializedSoldier implements ISoldier, ISpecialisedSoldier, ICommando {
 
-    Map<String, String> missions = new LinkedHashMap<>();
+    private Map<String, String> missions = new LinkedHashMap<>();
 
     public Commando(int id, String firstName, String lastName, double salary, String corpse) {
         super(id, firstName, lastName, salary, corpse);
@@ -19,28 +19,8 @@ public class Commando extends SpecializedSoldier implements ISoldier, ISpecialis
     }
 
     @Override
-    public int getId() {
-        return this.id;
-    }
-
-    @Override
-    public String getFirstName() {
-        return this.firstName;
-    }
-
-    @Override
-    public String getLastName() {
-        return this.lastName;
-    }
-
-    @Override
-    public String getCorps() {
-        return this.corpse;
-    }
-
-    @Override
     public String toString() {
-        System.out.printf("Name: %s %s Id: %d Salary: %.2f%nCorps: %s%nMissions:", this.firstName, this.lastName, this.id, this.salary, this.corpse);
+        System.out.printf("%s%n%s%nMissions:", super.toString(), super.getCorps());
         for (Map.Entry<String,String> s : missions.entrySet()) {
             System.out.printf("%n Code Name: %s State: %s", s.getKey(), s.getValue());
         }
